@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Enhanced Ball Adventure</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="stars-bg"></div>
+
+        <!-- UI -->
+        <div class="ui-overlay">
+            <div class="stat-card"><div>نقاط: <span
+                        id="scoreValue">0</span></div></div>
+            <div class="stat-card"><div>كومبو: <span
+                        id="comboValue">×1</span></div></div>
+            <div class="stat-card"><div>موجة: <span
+                        id="waveValue">1</span></div></div>
+        </div>
+
+        <div class="health-bar" id="healthBar">
+            <div class="heart">♥</div><div class="heart">♥</div><div
+                class="heart">♥</div>
+        </div>
+
+        <div class="level-indicator">مستوى <span id="levelValue">1</span></div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="power-up-bar">
+            <div class="power-up shield" id="shieldPower"
+                title="درع واقي">🛡️</div>
+            <div class="power-up speed" id="speedPower"
+                title="سرعة فائقة">⚡</div>
+            <div class="power-up magnet" id="magnetPower"
+                title="مغناطيس النجوم">🧲</div>
+            <div class="power-up freeze" id="freezePower"
+                title="تجميد الوقت">❄️</div>
+        </div>
+
+        <div class="controls">←→ للحركة | ↑/مسافة للقفز | 1,2,3,4 للقوى
+            الخاصة<br>اللمس: اسحب للحركة، انقر للقفز</div>
+        <div id="randomMessage"></div>
+        <div class="combo-display" id="comboDisplay"></div>
+
+        <div id="gameOver">
+            <h1>انتهت اللعبة!</h1>
+            <p id="finalScore">نقاطك النهائية: 0</p>
+            <p id="finalLevel">وصلت للمستوى: 1</p>
+            <p id="finalWave">آخر موجة: 1</p>
+            <button onclick="resetGame()">العب مرة أخرى</button>
+        </div>
+
+        <!-- البرمجة -->
+        <script src="main.js"></script>
+        <script src="logic.js"></script>
+        <script src="game.js"></script>
+    </body>
+</html>
